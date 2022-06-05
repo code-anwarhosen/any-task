@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Login | To-do{% endblock title %}
+{% block content %}
+<div class="container my-5">
+    <div class="d-flex justify-content-center">
+        <div class="p-5 bg-light border rounded-3">
+            <form action="/login/" method="post">
+                {% csrf_token %}
+                <div class="d-flex justify-content-center"><h3 class="fw-bold">Sign In</h3></div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">User Name:</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <div class="mb-3 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-dark btn-sm">Sign In</button>
+                </div>
+            </form>
+            <p></p>
+            <p class="text text-dark">Don't have account? <a class="link text-decoration-none" href="/registration/">Sign Up</a> now.</p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

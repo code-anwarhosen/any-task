@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile | To-do{% endblock title %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="d-flex justify-content-center">
+        <div class="text text-primary mb-3 d-flex"><h4 class="text">Username : {{user.username}}</h4></div>
+        
+        <div class="link mx-3"><a class="nav-link btn btn-warning" href="/logout/" tabindex="-1">Logout</a></div>
+    </div>
+</div>
+{% endblock content %}
